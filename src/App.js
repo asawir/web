@@ -13,6 +13,8 @@ import Counter from './Counter';
 import InputForm from './InputForm';
 import Footer from './Footer';
 import MasterTodos from './masterTodos';
+import Statewise from './statewise';
+import Calculator from './Components/Calculator';
 
 function App() {
   const [city, setCity] = useState("Kudachi");
@@ -39,6 +41,9 @@ function App() {
             <Nav.Link href="#Counter"><Link to="/Counter">Counter</Link></Nav.Link>
             <Nav.Link href="#home"><Link to="/InputForm">Input</Link></Nav.Link>
             <Nav.Link href="#home"><Link to="/MasterTodos">Todo</Link></Nav.Link>
+            <Nav.Link href="#home"><Link to="/Statewise">Covid</Link></Nav.Link>
+            <Nav.Link href="#home"><Link to="/Calculator">Calculator</Link></Nav.Link>
+
             <Nav.Link href="#home"><Link to="/">Home</Link></Nav.Link>
           </ul>
         </nav>
@@ -71,8 +76,12 @@ function App() {
           <Route path="/MasterTodos">
             <MasterTodos />
           </Route>
-
-          
+          <Route path ="/Statewise">
+              <Statewise />
+          </Route> 
+          <Route path ="/Calculator">
+            <Calculator  />
+          </Route>       
           <Route path="/">
             <Home />
           </Route>
